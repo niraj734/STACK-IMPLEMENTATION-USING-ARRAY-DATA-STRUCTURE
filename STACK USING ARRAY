@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+class MyStack
+{
+	public static final int MAX=5;
+	public static int top=-1;
+	static int arr[]=new int[MAX];
+	public static void push()
+	{
+		if(top==MAX-1)
+		{
+			
+			System.out.println("STACK OVERFLOW");
+		}
+		
+		else
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter a element");
+			//int i=sc.nextInt();
+			top=top+1;
+			arr[top]=sc.nextInt();
+			
+			
+		}
+		
+	}
+	public static void pop()
+	{
+		if(top==-1)
+		{
+			System.out.println("STACK UNDERFLOW");
+		}
+		else
+		{
+      
+			top=top-1;
+			
+			
+		}
+		
+	}
+	public static void display()
+	{
+		if(top==-1)
+		{
+			System.out.println("stack is empty");
+		}
+		else
+		{
+			System.out.println("THE STACK AFTER PERFORMING ALL OPERATIONS:");a
+			for(int i=top;i>-1;i--)
+			{
+				
+				System.out.println(arr[i]);
+			}
+		}
+		
+	}
+	public static int peek()
+	{
+		System.out.println("THE TOP ELEMENT IS ");
+		return arr[top];
+	}
+}
+public class PUSH_METHOD {
+
+	public static void main(String[] args) 
+	{
+		MyStack.push();
+		MyStack.push();
+    MyStack.push();
+		MyStack.push();
+		MyStack.push();
+		MyStack.pop();
+		MyStack.display();
+		System.out.println(MyStack.peek());
+	}
+
+}
+		
+		
+
+		
+				
+	
+		
+		
+		
+		
+	
+
+
